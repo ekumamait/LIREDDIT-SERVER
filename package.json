@@ -1,0 +1,44 @@
+{
+  "name": "LIREDDIT-SERVER",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "startx": "node dist/index.ts",
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon dist/index.js",
+    "watch": "tsc -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ekumamait/LIREDDIT-SERVER.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ekumamait/LIREDDIT-SERVER/issues"
+  },
+  "homepage": "https://github.com/ekumamait/LIREDDIT-SERVER#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "nodemon": "^2.0.15",
+    "ts-node": "^10.4.0",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@mikro-orm/cli": "^4.5.9",
+    "@mikro-orm/core": "^4.5.9",
+    "@mikro-orm/migrations": "^4.5.9",
+    "@mikro-orm/postgresql": "^4.5.9",
+    "pg": "^8.7.1"
+  },
+  "mikro-orm": {
+    "useTsNode": true,
+    "configPaths": [
+      "./src/mikro-orm.config.ts",
+      "./dist/mikro-orm.config.js"
+    ]
+  }
+}
